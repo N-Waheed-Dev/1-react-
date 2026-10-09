@@ -1,0 +1,118 @@
+
+.about-section {
+  background-color: #1a51e5; 
+  padding: 80px 20px;
+  overflow: hidden; 
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 40px;
+  align-items: center;
+}
+
+
+.about-card {
+  padding: 60px 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  flex: 1;
+  min-width: 0;
+}
+
+
+.orange-card {
+  background-color: #f28b32; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: slideFromTop 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+.blue-card {
+  background-color: transparent; 
+}
+
+
+.blue-card-content {
+  opacity: 0;
+  animation: slideFromBottom 0.9s cubic-bezier(0.25, 1, 0.5, 1) 0.3s forwards; 
+}
+
+
+.card-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.card-description {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-light {
+  display: inline-block;
+  background-color: #e6e6e6; 
+  color: #555555;
+  padding: 12px 35px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #ffffff;
+  color: #333333;
+  transform: translateY(-2px);
+}
+
+
+@keyframes slideFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .card-title {
+    font-size: 32px;
+  }
+}
