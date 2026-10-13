@@ -1,35 +1,43 @@
 
-import './AboutSection.css';
+import style from "./AboutSection.module.css";
 
 function AboutSection() {
   return (
-    <section className="about-section">
-      <div className="about-container">
-        <div className="about-card orange-card">
-          <h2 className="card-title">20+ Years Experience</h2>
-          <p className="card-description">
+    <section className={style.aboutSection}>
+      <div className={style.aboutContainer}>
+        <div className={`${style.aboutCard} ${style.orangeCard}`}>
+          <h2 className={style.cardTitle}>20+ Years Experience</h2>
+
+          <p className={style.cardDescription}>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco
             laboris nisi ut aliquip ex ea commodo consequat. Duis aute
             irure dolor in reprehenderit
           </p>
-          <a href="#get-started" className="btn-light"> Get Started </a>
+
+          <a href="#get-started" className={style.btnLight}>
+            Get Started
+          </a>
         </div>
 
-        <div className="about-card blue-card">
-          <div className="blue-card-content">
-            <h2 className="card-title">Who We Are</h2>
-            <p className="card-description">
+        <div className={`${style.aboutCard} ${style.blueCard}`}>
+          <div className={style.blueCardContent}>
+            <h2 className={style.cardTitle}>Who We Are</h2>
+
+            <p className={style.cardDescription}>
               Ut enim ad minim veniam, quis nostrud exercitation ullamco
               laboris nisi ut aliquip ex ea commodo consequat. Duis aute
               irure dolor in reprehenderit
             </p>
-            <a href="#get-started" className="btn-light"> Get Started </a>
+
+            <a href="#get-started" className={style.btnLight}>
+              Get Started
+            </a>
           </div>
         </div>
-
       </div>
     </section>
   );
 }
 
 export default AboutSection;
+

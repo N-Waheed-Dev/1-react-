@@ -1,11 +1,11 @@
 
-.support-section {
+.supportSection {
   background-color: #f2efe9; 
   padding: 100px 20px;
   overflow: hidden;
 }
 
-.support-container {
+.supportContainer {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -15,7 +15,7 @@
 }
 
 
-.support-image-wrapper {
+.supportImageWrapper {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -23,21 +23,21 @@
   animation: slideFromLeft 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-.support-image {
+.supportImage {
   max-width: 100%;
   height: auto;
   object-fit: contain;
 }
 
 
-.support-content {
+.supportContent {
   flex: 1;
   max-width: 580px;
   opacity: 0;
   animation: slideFromRight 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-.support-title {
+.supportTitle {
   font-size: 46px;
   font-weight: 700;
   color: #4a4a4a;
@@ -46,7 +46,7 @@
 }
 
 
-.support-text {
+.supportText {
   font-size: 16px;
   line-height: 1.8;
   color: #666666;
@@ -54,14 +54,14 @@
 }
 
 
-.support-attribution {
+.supportAttribution {
   font-size: 14px;
   color: #888888;
   margin-bottom: 35px;
 }
 
 
-.btn-support {
+.btnSupport {
   display: inline-block;
   background-color: #e57e38;
   color: #ffffff;
@@ -74,7 +74,7 @@
   box-shadow: 0 4px 15px rgba(229, 126, 56, 0.3);
 }
 
-.btn-support:hover {
+.btnSupport:hover {
   background-color: #d66c27;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(229, 126, 56, 0.4);
@@ -107,17 +107,17 @@
 
 
 @media (max-width: 992px) {
-  .support-container {
+  .supportContainer {
     flex-direction: column;
     text-align: center;
     gap: 40px;
   }
 
-  .support-content {
+  .supportContent {
     max-width: 100%;
   }
 
-  .support-title {
+  .supportTitle {
     font-size: 36px;
   }
 }

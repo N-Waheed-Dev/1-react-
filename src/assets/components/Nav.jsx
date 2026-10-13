@@ -1,39 +1,54 @@
-import './Nav.css';
+
+import style from "./Nav.module.css";
 import logo from "../pages/logo-hostig.png";
+
 const Nav = () => {
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
+    <nav className={style.navbar}>
+      <div className={style["navbar-container"]}>
+
         {/* قسم اللوجو */}
-        <div className="navbar-logo">
-          <a href="src/assets/pages/logo-hostig.png">
+        <div className={style["navbar-logo"]}>
+          <a href="#home">
             <img src={logo} alt="Hostaro Logo" />
           </a>
         </div>
 
         {/* روابط التنقل */}
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <a href="#home" className="nav-links">
+        <ul className={style["nav-menu"]}>
+          <li className={style["nav-item"]}>
+            <a href="#home" className={style["nav-links"]}>
               HOME
             </a>
           </li>
-          <li className="nav-item dropdown">
-            <a href="#pages" className="nav-links active">
-              PAGES <span className="arrow">⌄</span>
+
+          <li className={`${style["nav-item"]} ${style.dropdown}`}>
+            <a
+              href="#pages"
+              className={`${style["nav-links"]} ${style.active}`}
+            >
+              PAGES <span className={style.arrow}>⌄</span>
             </a>
-            {/* قائمة منسدلة إن أردت استخدامها لاحقاً */}
-            <ul className="dropdown-menu">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Services</a></li>
+
+            {/* القائمة المنسدلة */}
+            <ul className={style["dropdown-menu"]}>
+              <li>
+                <a href="#about">About Us</a>
+              </li>
+
+              <li>
+                <a href="#services">Services</a>
+              </li>
             </ul>
           </li>
-          <li className="nav-item">
-            <a href="#contact" className="nav-links">
+
+          <li className={style["nav-item"]}>
+            <a href="#contact" className={style["nav-links"]}>
               CONTACT
             </a>
           </li>
         </ul>
+
       </div>
     </nav>
   );

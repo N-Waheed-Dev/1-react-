@@ -1,15 +1,15 @@
 
-.hero-section {
+.heroSection {
   background: linear-gradient(135deg, #1b52e8 0%, #1742be 100%);
   color: #fff;
   padding: 80px 20px;
   min-height: 85vh;
   display: flex;
   align-items: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.hero-container {
+.heroContainer {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -19,13 +19,13 @@
   gap: 40px;
 }
 
-.hero-content {
+.heroContent {
   flex: 1;
   max-width: 550px;
   animation: slideInLeft 0.8s ease-out forwards;
 }
 
-.hero-badge {
+.heroBadge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -34,7 +34,18 @@
   color: #ffcccc;
 }
 
-.hero-title {
+.fireIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fireIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.heroTitle {
   font-size: 56px;
   font-weight: 800;
   line-height: 1.15;
@@ -42,22 +53,21 @@
   letter-spacing: -1px;
 }
 
-.hero-subtitle {
+.heroSubtitle {
   font-size: 14px;
   color: #b0c4de;
   margin-bottom: 35px;
 }
 
-
-.hero-action {
+.heroAction {
   display: flex;
   align-items: center;
   gap: 25px;
   opacity: 0;
-  animation: slideInUp 0.8s ease-out 1.2s forwards; 
+  animation: slideInUp 0.8s ease-out 1.2s forwards;
 }
 
-.btn-get-started {
+.btnGetStarted {
   background-color: #e57e38;
   color: #ffffff;
   padding: 16px 36px;
@@ -69,29 +79,28 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-get-started:hover {
+.btnGetStarted:hover {
   background-color: #d66c27;
   transform: translateY(-2px);
 }
 
-.hero-price {
+.heroPrice {
   display: flex;
   flex-direction: column;
   font-size: 14px;
 }
 
-.hero-price span {
+.heroPrice span {
   color: #d0e0ff;
 }
 
-.hero-price strong {
+.heroPrice strong {
   font-size: 18px;
   font-weight: 800;
   color: #ffffff;
 }
 
-
-.hero-image-wrapper {
+.heroImageWrapper {
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -99,69 +108,98 @@
   animation: slideInRight 0.8s ease-out 0.5s forwards;
 }
 
-.hero-image {
+.heroImage {
   max-width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-
+/* =========================
+   ANIMATIONS
+========================= */
 
 @keyframes slideInLeft {
   from {
     opacity: 0;
     transform: translateX(-100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
-
 
 @keyframes slideInRight {
   from {
     opacity: 0;
     transform: translateX(100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-
 @keyframes slideInUp {
   from {
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 992px) {
-  .hero-container {
+  .heroContainer {
     flex-direction: column;
     text-align: center;
   }
-  
-  .hero-content {
+
+  .heroContent {
     max-width: 100%;
   }
 
-  .hero-action {
+  .heroAction {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .hero-image-wrapper {
+  .heroImageWrapper {
     justify-content: center;
+    width: 100%;
   }
 
-  .hero-title {
+  .heroTitle {
     font-size: 40px;
   }
 }
+
+@media (max-width: 576px) {
+  .heroSection {
+    padding: 60px 20px;
+  }
+
+  .heroTitle {
+    font-size: 34px;
+  }
+
+  .heroBadge {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .heroImage {
+    max-width: 100%;
+  }
+}
+

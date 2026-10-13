@@ -1,11 +1,11 @@
 
-.about-section {
-  background-color: #1a51e5; 
+.aboutSection {
+  background-color: #1a51e5;
   padding: 80px 20px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.about-container {
+.aboutContainer {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -15,8 +15,7 @@
   align-items: center;
 }
 
-
-.about-card {
+.aboutCard {
   padding: 60px 40px;
   border-radius: 20px;
   text-align: center;
@@ -25,33 +24,29 @@
   min-width: 0;
 }
 
-
-.orange-card {
-  background-color: #f28b32; 
+.orangeCard {
+  background-color: #f28b32;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   animation: slideFromTop 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-
-.blue-card {
-  background-color: transparent; 
+.blueCard {
+  background-color: transparent;
 }
 
-
-.blue-card-content {
+.blueCardContent {
   opacity: 0;
-  animation: slideFromBottom 0.9s cubic-bezier(0.25, 1, 0.5, 1) 0.3s forwards; 
+  animation: slideFromBottom 0.9s cubic-bezier(0.25, 1, 0.5, 1) 0.3s forwards;
 }
 
-
-.card-title {
+.cardTitle {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 25px;
   line-height: 1.2;
 }
 
-.card-description {
+.cardDescription {
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 35px;
@@ -61,9 +56,9 @@
   margin-right: auto;
 }
 
-.btn-light {
+.btnLight {
   display: inline-block;
-  background-color: #e6e6e6; 
+  background-color: #e6e6e6;
   color: #555555;
   padding: 12px 35px;
   border-radius: 8px;
@@ -73,46 +68,54 @@
   transition: all 0.3s ease;
 }
 
-.btn-light:hover {
+.btnLight:hover {
   background-color: #ffffff;
   color: #333333;
   transform: translateY(-2px);
 }
 
+/* =========================
+   ANIMATIONS
+========================= */
 
 @keyframes slideFromTop {
   from {
     opacity: 0;
     transform: translateY(-120px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 
 @keyframes slideFromBottom {
   from {
     opacity: 0;
     transform: translateY(120px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 992px) {
-  .about-container {
+  .aboutContainer {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
     gap: 30px;
   }
 
-  .card-title {
+  .cardTitle {
     font-size: 32px;
   }
 }
+

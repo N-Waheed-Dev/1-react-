@@ -1,28 +1,38 @@
 
-import './SupportSection.css';
+import style from "./SupportSection.module.css";
 import supportImg from "../pages/support-img.png";
+
 function SupportSection() {
   return (
-    <section className="support-section">
-      <div className="support-container">
-        <div className="support-image-wrapper">
-          <img src={supportImg}  alt="24/7/365 Support Illustration"  className="support-image"  />
+    <section className={style.supportSection}>
+      <div className={style.supportContainer}>
+
+        <div className={style.supportImageWrapper}>
+          <img
+            src={supportImg}
+            alt="24/7/365 Support Illustration"
+            className={style.supportImage}
+          />
         </div>
 
-        <div className="support-content">
-          <h2 className="support-title">24/7/365 Support</h2>
-          
-          <p className="support-text">
+        <div className={style.supportContent}>
+          <h2 className={style.supportTitle}>
+            24/7/365 Support
+          </h2>
+
+          <p className={style.supportText}>
             Sample text. Click to select the Text Element. Duis aute
             irure dolor in reprehenderit in voluptate velit esse cillum
             dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt
             mollit anim id est laborum.
           </p>
-          
-          <p className="support-attribution">Image from Freepik</p>
-          
-          <a href="#get-started" className="btn-support">
+
+          <p className={style.supportAttribution}>
+            Image from Freepik
+          </p>
+
+          <a href="#get-started" className={style.btnSupport}>
             Get Started
           </a>
         </div>
